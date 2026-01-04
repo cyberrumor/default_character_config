@@ -1,0 +1,1196 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+    <moduleName>default_character_config</moduleName>
+    <requiredInstallFiles>
+        <file source="skypatcher/doomstones/000_remove_starting_doomstones.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/000_remove_starting_doomstones.ini" />
+        <file source="skypatcher/spells/000_remove_starting_spells.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/000_remove_starting_spells.ini" />
+        <file source="skypatcher/items/000_remove_starting_items.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/items/000_remove_starting_items.ini" />
+    </requiredInstallFiles>
+    <installSteps order="Explicit">
+        <installStep name="Default Character Config">
+            <optionalFileGroups order="Explicit">
+                <group name="default_character_config core" type="SelectExactlyOne">
+                    <plugins order="Explicit">
+                        <plugin name="default_character_config - core">
+                            <description>default_character_config allows you to configure the player character object utilized by new games as well as by the "coc" console command (when it's used from the main menu and a save hasn't been loaded since game launch). It doesn't impact existing savefiles. The core files are required. They remove all starting spells from the player character (including racial spells, though powers are left intact), and remove all items. Starting spells and starting items are configured via the rest of the fomod options.</description>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+        <installStep name="Choose Race">
+            <optionalFileGroups order="Explicit">
+                <group name="Races" type="SelectExactlyOne">
+                    <plugins order="Explicit">
+
+                        <plugin name="Argonian - Female">
+                            <description>This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly.</description>
+                            <files>
+                                <file source="skypatcher/races/argonian_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/argonian_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Argonian - Male">
+                            <description>This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly.</description>
+                            <files>
+                                <file source="skypatcher/races/argonian_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/argonian_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Breton - Female">
+                            <description>In addition to their quick and perceptive grasp of spellcraft, even the humblest of High Rock's Bretons can boast a resistance to magic. Bretons can call upon the Dragonskin power to absorb spells.</description>
+                            <files>
+                                <file source="skypatcher/races/breton_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/breton_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Breton - Male">
+                            <description>In addition to their quick and perceptive grasp of spellcraft, even the humblest of High Rock's Bretons can boast a resistance to magic. Bretons can call upon the Dragonskin power to absorb spells.</description>
+                            <files>
+                                <file source="skypatcher/races/breton_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/breton_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Dark Elf - Female">
+                            <description>Also known as "Dunmer" in their homeland of Morrowind, dark elves are noted for their stealth and magic skills. They are naturally resistant to fire and can call upon their Ancestor's Wrath to surround themselves in fire.</description>
+                            <files>
+                                <file source="skypatcher/races/dunmer_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/dunmer_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Dark Elf - Male">
+                            <description>Also known as "Dunmer" in their homeland of Morrowind, dark elves are noted for their stealth and magic skills. They are naturally resistant to fire and can call upon their Ancestor's Wrath to surround themselves in fire.</description>
+                            <files>
+                                <file source="skypatcher/races/dunmer_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/dunmer_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="High Elf - Female">
+                            <description>Also known as "Altmer" in their homeland of Summerset Isle, the high elves are the most strongly gifted in the arcane arts of all the races. They can call upon their Highborn power to regenerate Magicka quickly.</description>
+                            <files>
+                                <file source="skypatcher/races/altmer_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/altmer_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="High Elf - Male">
+                            <description>Also known as "Altmer" in their homeland of Summerset Isle, the high elves are the most strongly gifted in the arcane arts of all the races. They can call upon their Highborn power to regenerate Magicka quickly.</description>
+                            <files>
+                                <file source="skypatcher/races/altmer_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/altmer_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Imperial - Female">
+                            <description>Natives of Cyrodiil, they have proved to be shrewd diplomats and traders. They are skilled with combat and magic. Anywhere gold coins might be found, Imperials always seem to find a few more. They can call upon the Voice of the Emperor to calm an enemy.</description>
+                            <files>
+                                <file source="skypatcher/races/imperial_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/imperial_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Imperial - Male">
+                            <description>Natives of Cyrodiil, they have proved to be shrewd diplomats and traders. They are skilled with combat and magic. Anywhere gold coins might be found, Imperials always seem to find a few more. They can call upon the Voice of the Emperor to calm an enemy.</description>
+                            <files>
+                                <file source="skypatcher/races/imperial_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/imperial_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Khajiit - Female">
+                            <description>Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks.</description>
+                            <files>
+                                <file source="skypatcher/races/khajiit_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/khajiit_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Khajiit - Male">
+                            <description>Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks.</description>
+                            <files>
+                                <file source="skypatcher/races/khajiit_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/khajiit_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Nord - Female">
+                            <description>Citizens of Skyrim, they are a tall and fair-haired people.  Strong and hardy, Nords are famous for their resistance to cold and their talent as warriors. They can use a Battlecry to make opponents flee.</description>
+                            <files>
+                                <file source="skypatcher/races/nord_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/nord_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Nord - Male">
+                            <description>Citizens of Skyrim, they are a tall and fair-haired people.  Strong and hardy, Nords are famous for their resistance to cold and their talent as warriors. They can use a Battlecry to make opponents flee.</description>
+                            <files>
+                                <file source="skypatcher/races/nord_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/nord_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Orc - Female">
+                            <description>The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage.</description>
+                            <files>
+                                <file source="skypatcher/races/orc_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/orc_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Orc - Male">
+                            <description>The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage.</description>
+                            <files>
+                                <file source="skypatcher/races/orc_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/orc_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Redguard - Female">
+                            <description>The most naturally talented warriors in Tamriel, the Redguards of Hammerfell have a hardy constitution and a natural resistance to poison. They can call upon an Adrenaline Rush in combat.</description>
+                            <files>
+                                <file source="skypatcher/races/redguard_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/redguard_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Redguard - Male">
+                            <description>The most naturally talented warriors in Tamriel, the Redguards of Hammerfell have a hardy constitution and a natural resistance to poison. They can call upon an Adrenaline Rush in combat.</description>
+                            <files>
+                                <file source="skypatcher/races/redguard_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/redguard_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Wood Elf - Female">
+                            <description>The clanfolk of the Western Valenwood forests, also known as "Bosmer." Wood elves make good scouts and thieves, and there are no finer archers in all of Tamriel. They have natural resistances to both poisons and diseases. They can Command Animals to fight for them.</description>
+                            <files>
+                                <file source="skypatcher/races/bosmer_female.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/bosmer_female.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Wood Elf - Male">
+                            <description>The clanfolk of the Western Valenwood forests, also known as "Bosmer." Wood elves make good scouts and thieves, and there are no finer archers in all of Tamriel. They have natural resistances to both poisons and diseases. They can Command Animals to fight for them.</description>
+                            <files>
+                                <file source="skypatcher/races/bosmer_male.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/race/bosmer_male.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+
+        <installStep name="Choose Doomstone">
+            <optionalFileGroups order="Explicit">
+                <group name="Doomstones" type="SelectAtMostOne">
+                    <plugins order="Explicit">
+                        <plugin name="Apprentice Stone">
+                            <description>Those under the sign of The Apprentice recover Magicka faster, but are more susceptible to Magicka damage.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/apprentice.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/apprentice.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Atronach Stone">
+                            <description>Those under the sign of The Atronach absorb a portion of incoming spell damage and have a larger pool of Magicka, but recover it more slowly.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/atronach.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/atronach.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lady Stone">
+                            <description>Those under the sign of The Lady regenerate Health and Stamina more quickly.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/lady.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/lady.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lord Stone">
+                            <description>Those under the sign of The Lord are more resistant to both Magicka and physical damage.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/lord.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/lord.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lover Stone">
+                            <description>Those under the sign of The Lover always feel a Lover's Comfort. (All skills improve faster.)</description>
+                            <files>
+                                <file source="skypatcher/doomstones/lover.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/lover.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Mage Stone">
+                            <description>Those under the sign of The Mage will learn all magic skills 20% faster.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/mage.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/mage.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Ritual Stone">
+                            <description>Once a day, those under the sign of The Ritual can reanimate nearby corpses to fight for them.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/ritual.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/ritual.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Serpent Stone">
+                            <description>Once a day, those under the sign of The Serpent can use a ranged paralyzing poison on opponents.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/serpent.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/serpent.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Shadow Stone">
+                            <description>Once a day, those under the sign of The Shadow can become invisible for an extended period.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/shadow.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/shadow.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Steed Stone">
+                            <description>Those under the sign of The Steed can carry more and do not suffer a movement penalty from armor.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/steed.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/steed.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Thief Stone">
+                            <description>Those under the sign of The Thief will learn all stealth skills 20% faster.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/thief.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/thief.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Tower Stone">
+                            <description>Those under the sign of The Tower have the option to automatically open Expert or lower locks.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/tower.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/tower.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Warrior Stone">
+                            <description>Those under the sign of The Warrior will learn all combat skills 20% faster.</description>
+                            <files>
+                                <file source="skypatcher/doomstones/warrior.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/warrior.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+
+        <installStep name="Choose Spells">
+            <optionalFileGroups order="Explicit">
+                <group name="Alteration Spells" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Candlelight">
+                            <description>Alteration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/candlelight.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/candlelight.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Detect Dead">
+                            <description>Alteration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/detect_dead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/detect_dead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Detect Life">
+                            <description>Alteration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/detect_life.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/detect_life.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Dragonhide">
+                            <description>Alteration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/dragonhide.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dragonhide.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Ebonyflesh">
+                            <description>Alteration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/ebonyflesh.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/ebonyflesh.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Equilibrium">
+                            <description>Alteration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/equilibrium.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/equilibrium.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Ironflesh">
+                            <description>Alteration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/ironflesh.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/ironflesh.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Magelight">
+                            <description>Alteration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/magelight.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/magelight.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Mass Paralysis">
+                            <description>Alteration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/mass_paralysis.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/mass_paralysis.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Oakflesh">
+                            <description>Alteration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/oakflesh.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/oakflesh.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Paralyze">
+                            <description>Alteration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/paralyze.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/paralyze.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Stoneflesh">
+                            <description>Alteration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/stoneflesh.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/stoneflesh.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Telekinesis">
+                            <description>Alteration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/telekinesis.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/telekinesis.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Transmute">
+                            <description>Alteration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/transmute.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/transmute.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Waterbreathing">
+                            <description>Alteration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/waterbreathing.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/waterbreathing.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+
+                <group name="Conjuration Spells" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Banish Daedra">
+                            <description>Conjuration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/banish_daedra.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/banish_daedra.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Bound Battleaxe">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/bound_battleaxe.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/bound_battleaxe.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Bound Bow">
+                            <description>Conjuration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/bound_bow.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/bound_bow.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Bound Sword">
+                            <description>Conjuration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/bound_sword.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/bound_sword.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Command Daedra">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/command_daedra.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/command_daedra.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Dragon Priest">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/dragon_priest.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dragon_priest.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Dremora Lord">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/dremora_lord.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dremora_lord.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Familiar">
+                            <description>Conjuration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/familiar.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/familiar.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Flame Atronach">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/flame_atronach.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/flame_atronach.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Frost Atronach">
+                            <description>Conjuration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/frost_atronach.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frost_atronach.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Storm Atronach">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/storm_atronach.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/storm_atronach.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Dead Thrall">
+                            <description>Conjuration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/dead_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dead_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Dread Zombie">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/dread_zombie.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dread_zombie.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Expel Daedra">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/expel_daedra.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/expel_daedra.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Flame Thrall">
+                            <description>Conjuration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/flame_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/flame_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Flaming Familiar">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/flaming_familiar.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/flaming_familiar.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Frost Thrall">
+                            <description>Conjuration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/frost_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frost_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Raise Zombie">
+                            <description>Conjuration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/raise_zombie.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/raise_zombie.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Reanimate Corpse">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/reanimate_corpse.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/reanimate_corpse.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Revenant">
+                            <description>Conjuration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/revenant.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/revenant.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Soul Trap">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/soul_trap.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/soul_trap.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Storm Thrall">
+                            <description>Conjuration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/storm_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/storm_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+
+                <group name="Destruction Spells" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Blizzard">
+                            <description>Destruction - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/blizzard.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/blizzard.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Chain Lightning">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/chain_lightning.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/chain_lightning.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fire Rune">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/fire_rune.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fire_rune.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fire Storm">
+                            <description>Destruction - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/fire_storm.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fire_storm.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fireball">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/fireball.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fireball.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Firebolt">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/firebolt.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/firebolt.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Flame Cloak">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/flame_cloak.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/flame_cloak.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Flames">
+                            <description>Destruction - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/flames.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/flames.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Frost Cloak">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/frost_cloak.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frost_cloak.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Frost Rune">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/frost_rune.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frost_rune.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Frostbite">
+                            <description>Destruction - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/frostbite.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frostbite.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Ice Spike">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/ice_spike.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/ice_spike.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Ice Storm">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/ice_storm.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/ice_storm.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Icy Spear">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/icy_spear.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/icy_spear.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Incinerate">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/incinerate.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/incinerate.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lightning Bolt">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/lightning_bolt.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lightning_bolt.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lightning Cloak">
+                            <description>Destruction - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/lightning_cloak.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lightning_cloak.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lightning Rune">
+                            <description>Destruction - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/lightning_rune.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lightning_rune.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lightning Storm">
+                            <description>Destruction - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/lightning_storm.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lightning_storm.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Sparks">
+                            <description>Destruction - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/sparks.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/sparks.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Thunderbolt">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/thunderbolt.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/thunderbolt.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Wall of Flames">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/wall_of_flames.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/wall_of_flames.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Wall of Frost">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/wall_of_frost.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/wall_of_frost.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Wall of Storms">
+                            <description>Destruction - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/wall_of_storms.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/wall_of_storms.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+
+                <group name="Illusion Spells" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Call to Arms">
+                            <description>Illusion - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/call_to_arms.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/call_to_arms.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Calm">
+                            <description>Illusion - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/calm.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/calm.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Clairvoyance">
+                            <description>Illusion - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/clairvoyance.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/clairvoyance.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Courage">
+                            <description>Illusion - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/courage.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/courage.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fear">
+                            <description>Illusion - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/fear.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fear.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Frenzy">
+                            <description>Illusion - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/frenzy.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/frenzy.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fury">
+                            <description>Illusion - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/fury.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fury.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Harmony">
+                            <description>Illusion - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/harmony.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/harmony.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Hysteria">
+                            <description>Illusion - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/hysteria.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/hysteria.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Invisibility">
+                            <description>Illusion - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/invisibility.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/invisibility.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Mayhem">
+                            <description>Illusion - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/mayhem.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/mayhem.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Muffle">
+                            <description>Illusion - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/muffle.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/muffle.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Pacify">
+                            <description>Illusion - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/pacify.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/pacify.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Rally">
+                            <description>Illusion - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/rally.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/rally.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Rout">
+                            <description>Illusion - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/rout.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/rout.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+
+                <group name="Restoration Spells" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Circle of Protection">
+                            <description>Restoration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/circle_of_protection.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/circle_of_protection.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Close Wounds">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/close_wounds.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/close_wounds.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Fast Healing">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/fast_healing.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/fast_healing.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Grand Healing">
+                            <description>Restoration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/grand_healing.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/grand_healing.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Greater Ward">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/greater_ward.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/greater_ward.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Guardian Circle">
+                            <description>Restoration - Master</description>
+                            <files>
+                                <file source="skypatcher/spells/guardian_circle.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/guardian_circle.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Heal Other">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/heal_other.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/heal_other.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Healing">
+                            <description>Restoration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/healing.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/healing.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Healing Hands">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/healing_hands.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/healing_hands.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Lesser Ward">
+                            <description>Restoration - Novice</description>
+                            <files>
+                                <file source="skypatcher/spells/lesser_ward.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lesser_ward.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Repel Lesser Undead">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/repel_lesser_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/repel_lesser_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Repel Undead">
+                            <description>Restoration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/repel_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/repel_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Steadfast Ward">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/steadfast_ward.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/steadfast_ward.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Turn Greater Undead">
+                            <description>Restoration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/turn_greater_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/turn_greater_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Turn Lesser Undead">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/turn_lesser_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/turn_lesser_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Turn Undead">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/turn_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/turn_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+    </installSteps>
+</config>
