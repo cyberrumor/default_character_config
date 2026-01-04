@@ -1192,5 +1192,212 @@
                 </group>
             </optionalFileGroups>
         </installStep>
+
+        <installStep name="Choose Attire">
+            <optionalFileGroups order="Explicit">
+                <group name="Outfits" type="SelectExactlyOne">
+                    <plugins order="Explicit">
+                        <plugin name="Barkeep Attire">
+                            <description>An apron that appears to have been used to clean up several spills. Grippy shoes.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_barkeep.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_barkeep.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Beggar Attire">
+                            <description>Ragged robes with matching boots.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_beggar.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_beggar.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Blacksmith Attire">
+                            <description>A heavy-duty apron with expendable shoes.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_blacksmith.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_blacksmith.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Chef Attire">
+                            <description>An iconic chef's hat paired with an apron and closed toed shoes.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_chef.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_chef.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Farmer Attire">
+                            <description>A simple belted tunic with boots that can withstand mud.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_farmer.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_farmer.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Guild Assassin Armor">
+                            <description>The form-fitting shrouded leather armor said to once be worn by a member of the Dark Brotherhood. Useful for stealth and archery.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_guild_assassin.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_guild_assassin.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Guild Mage Attire">
+                            <description>Robes typical of Winterhold College mages.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_guild_mage.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_guild_mage.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Guild Thief Armor">
+                            <description>Attractive leather armor with a fair amount of conspicuous pockets (and even more hidden ones).</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_guild_thief.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_guild_thief.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Hunter Armor">
+                            <description>A set of fur armor with a hood instead of a helmet.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_hunter.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_hunter.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Imperial Soldier Armor - Heavy">
+                            <description>Iron armor meeting the imperial-mandated specifications.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_imperial_heavy.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_imperial_heavy.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Imperial Soldier Armor - Light">
+                            <description>Leather armor meeting the imperial-mandated specifications.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_imperial_light.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_imperial_light.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Iron Armor">
+                            <description>A full set of heavy iron armor.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_iron.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_iron.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Leather Armor">
+                            <description>A full set of leather armor.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_leather.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_leather.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Linwe's Armor">
+                            <description>Lightweight leather armor designed for stealth, combat, and mobility. Suitable attire for less-than-legal transactions, especially when they go wrong.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_linwe.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_linwe.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Merchant Attire">
+                            <description>Clothes suitable for days spent in town.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_merchant.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_merchant.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Miner Attire">
+                            <description></description>
+                            <files>
+                                <file source="skypatcher/outfits/000_miner.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_miner.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Monk Attire">
+                            <description>A humble hooded robe in an earthy brown.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_monk.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_monk.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Necromancer Attire">
+                            <description>Black robes with a sinister green skull died into the chest. The boots look like something a graverobber would wear.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_necromancer.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_necromancer.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Noble Attire">
+                            <description>Fine clothes for even finer company.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_noble.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_noble.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Prisoner Attire">
+                            <description>A roughspun tunic and footwraps.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_prisoner.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_prisoner.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Stormcloak Soldier Armor">
+                            <description>A padded blue tabbard with warm boots.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_stormcloak.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_stormcloak.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Thalmor Attire">
+                            <description>Sleek robes that compliment the height of the wearer. Includes matching boots and gloves.</description>
+                            <files>
+                                <file source="skypatcher/outfits/000_thalmor.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/outfit/000_thalmor.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
     </installSteps>
 </config>
