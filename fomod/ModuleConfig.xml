@@ -3,7 +3,7 @@
     <requiredInstallFiles>
         <file source="skypatcher/doomstones/000_remove_starting_doomstones.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/doomstone/000_remove_starting_doomstones.ini" />
         <file source="skypatcher/spells/000_remove_starting_spells.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/000_remove_starting_spells.ini" />
-        <file source="skypatcher/items/000_remove_starting_items.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/items/000_remove_starting_items.ini" />
+        <file source="skypatcher/items/001_remove_starting_items.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/items/001_remove_starting_items.ini" />
     </requiredInstallFiles>
     <installSteps order="Explicit">
         <installStep name="Default Character Config">
