@@ -1286,7 +1286,7 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
-                        <plugin name="Guard - Whiterun">
+                        <plugin name="Guard of Whiterun">
                             <description>Start with equipment from the city armory, 250 septims, 5 torches, a hunting bow, steel arrows, potions, and a snack.</description>
                             <files>
                                 <file source="skypatcher/origins/000_guard_whiterun.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_guard_whiterun.ini" priority="0" />
