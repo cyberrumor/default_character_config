@@ -1313,15 +1313,6 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
-                        <plugin name="Guild - Thief">
-                            <description>Start with Thieves Guild armor, 300 septims, 15 lockpicks, a steel dagger which could be recognized as wrought by Eorlund Gray-Mane by anyone with a discerning eye (which the merchant who traded it for garnets-passed-off-as-rubies evidently lacked), 3 torches, several potions, and a standard-issue recurve bow (made exactly to imperial spec for the officer it was "retrieved" on behalf of).</description>
-                            <files>
-                                <file source="skypatcher/origins/000_guild_thief.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_guild_thief.ini" priority="0" />
-                            </files>
-                            <typeDescriptor>
-                                <type name="Optional"/>
-                            </typeDescriptor>
-                        </plugin>
                         <plugin name="Guild - Vampire Hunter (Heavy)">
                             <description>Start with Dawnguard heavy armor, 100 septims, 4 lockpicks, plenty of torches, a fair amount of healing and disease curing potions, a crossbow, and bludgeoning weapons built specifically for slaying vampires.</description>
                             <files>
@@ -1380,6 +1371,15 @@
                             <description>Start with black robes, a sinister orcish mace of souls, 5 lockpicks, 2 torches, a handful of black gems, and ingedients that appear suitable for concocting a poison prone to causing the afflicted (afflicted innocents, preferably) to suffer bitterly painful deaths.</description>
                             <files>
                                 <file source="skypatcher/origins/000_necromancer.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_necromancer.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Rogue">
+                            <description>Start with Linwe's armor, 300 septims, 15 lockpicks, a steel dagger which could be recognized as wrought by Eorlund Gray-Mane by anyone with a discerning eye (which the merchant who traded it for garnets-passed-off-as-rubies evidently lacked), 3 torches, several potions, and a standard-issue recurve bow (made exactly to imperial spec for the officer it was "retrieved" on behalf of).</description>
+                            <files>
+                                <file source="skypatcher/origins/000_rogue.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_rogue.ini" priority="0" />
                             </files>
                             <typeDescriptor>
                                 <type name="Optional"/>
