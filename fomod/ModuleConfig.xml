@@ -1205,6 +1205,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Guard - Whiterun">
+                            <description>Start with equipment from the city armory, 250 septims, 5 torches, a hunting bow, steel arrows, potions, and a snack.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_guard_whiterun.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_guard_whiterun.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Guild - Assassin">
                             <description>Start with Dark Brotherhood armor, 200 septims (not stolen, technically speaking), 10 lockpicks, 3 torches, an exceptionally well-made steel dagger, several potions, some poisons, and one incredibly well-preserved wooden bow from an ancient tomb. The bow has an exceedingly heavy draw.</description>
                             <files>
