@@ -524,6 +524,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Conjure Boneman">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/boneman.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/boneman.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Conjure Dragon Priest">
                             <description>Conjuration - Expert</description>
                             <files>
@@ -569,6 +578,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Conjure Mistman">
+                            <description>Conjuration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/mistman.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/mistman.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Conjure Storm Atronach">
                             <description>Conjuration - Expert</description>
                             <files>
@@ -582,6 +600,15 @@
                             <description>Conjuration - Master</description>
                             <files>
                                 <file source="skypatcher/spells/dead_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/dead_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Conjure Wrathman">
+                            <description>Conjuration - Expert</description>
+                            <files>
+                                <file source="skypatcher/spells/wrathman.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/wrathman.ini" priority="0" />
                             </files>
                             <typeDescriptor>
                                 <type name="Optional"/>
@@ -672,6 +699,15 @@
                             <description>Conjuration - Master</description>
                             <files>
                                 <file source="skypatcher/spells/storm_thrall.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/storm_thrall.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Summon Arvak">
+                            <description>Conjuration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/arvak.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/arvak.ini" priority="0" />
                             </files>
                             <typeDescriptor>
                                 <type name="Optional"/>
@@ -1106,6 +1142,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Heal Undead">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/heal_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/heal_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Healing">
                             <description>Restoration - Novice</description>
                             <files>
@@ -1128,6 +1173,15 @@
                             <description>Restoration - Novice</description>
                             <files>
                                 <file source="skypatcher/spells/lesser_ward.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/lesser_ward.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Necromantic Healing">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/necromantic_healing.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/necromantic_healing.ini" priority="0" />
                             </files>
                             <typeDescriptor>
                                 <type name="Optional"/>
@@ -1160,6 +1214,24 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Stendarr's Aura">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/stendarrs_aura.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/stendarrs_aura.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Sun Fire">
+                            <description>Restoration - Apprentice</description>
+                            <files>
+                                <file source="skypatcher/spells/sun_fire.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/sun_fire.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Turn Greater Undead">
                             <description>Restoration - Expert</description>
                             <files>
@@ -1182,6 +1254,15 @@
                             <description>Restoration - Adept</description>
                             <files>
                                 <file source="skypatcher/spells/turn_undead.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/turn_undead.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Vampire's Bane">
+                            <description>Restoration - Adept</description>
+                            <files>
+                                <file source="skypatcher/spells/vampires_bane.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/spells/vampires_bane.ini" priority="0" />
                             </files>
                             <typeDescriptor>
                                 <type name="Optional"/>
