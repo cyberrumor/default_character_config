@@ -1250,6 +1250,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Knight">
+                            <description>Start with a full set of heavy steel plate, a silver sword, a silver greatsword, 5 torches, and potions suitable for a variety of combat styles as well as protection from disease. Finally, an amulet of Akatosh and scrolls to protect from the undead.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_knight.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_knight.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Necromancer">
                             <description>Start with black robes, a sinister orcish mace of souls, 5 lockpicks, 2 torches, a handful of black gems, and ingedients that appear suitable for concocting a poison prone to causing the afflicted (afflicted innocents, preferably) to suffer bitterly painful deaths.</description>
                             <files>
