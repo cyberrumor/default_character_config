@@ -1322,6 +1322,24 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Guild - Vampire Hunter (Heavy)">
+                            <description>Start with Dawnguard heavy armor, 100 septims, 4 lockpicks, plenty of torches, a fair amount of healing and disease curing potions, a crossbow, and bludgeoning weapons built specifically for slaying vampires.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_guild_vampire_hunter_heavy.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_guild_vampire_hunter_heavy.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Guild - Vampire Hunter (Light)">
+                            <description>Start with Dawnguard light armor, 100 septims, 4 lockpicks, plenty of torches, a fair amount of healing and disease curing potions, a crossbow, and bludgeoning weapons built specifically for slaying vampires.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_guild_vampire_hunter_light.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_guild_vampire_hunter_light.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Heavy">
                             <description>Start with a set of heavy iron armor, 500 septims for a squire, 2 torches, potions necessary for melee combat, and an impressive arsenal of Dwarven axes and hammers.</description>
                             <files>
