@@ -1259,6 +1259,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Cleric">
+                            <description>Start with earth-toned hooded robes, an amulet of Arkay, 5 torches, plenty of varied potions. A singular blessed steel mace will eventually diminish, at which time several scrolls will help keep companions alive, and undead at bay.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_cleric.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_cleric.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Necromancer">
                             <description>Start with black robes, a sinister orcish mace of souls, 5 lockpicks, 2 torches, a handful of black gems, and ingedients that appear suitable for concocting a poison prone to causing the afflicted (afflicted innocents, preferably) to suffer bitterly painful deaths.</description>
                             <files>
