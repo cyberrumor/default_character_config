@@ -1241,6 +1241,15 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Heavy">
+                            <description>Start with a set of heavy iron armor, 500 septims for a squire, 2 torches, potions necessary for melee combat, and an impressive arsenal of Dwarven axes and hammers.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_heavy.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_heavy.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
                         <plugin name="Hunter">
                             <description>Start with warm fur armor and a matching hood which seems to add a directional quality to the wearer's sense of sound. Additionally, a very dependable recurve hunting bow, and salts suitable for starting fires and cooking. The natural inclusion of both hatchet and steel dagger ensure a long stay from town is both possible and pleasant.</description>
                             <files>
