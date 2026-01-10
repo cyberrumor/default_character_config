@@ -1286,6 +1286,16 @@
                                 <type name="Optional"/>
                             </typeDescriptor>
                         </plugin>
+                        <plugin name="Mod Author - Alchemy">
+                            <description>Minimize the need for the console by starting with every potion and 5 of each ingredient.</description>
+                            <files>
+                                <file source="skypatcher/origins/000_mod_author_alchemy.ini" destination="SKSE/Plugins/SkyPatcher/npc/default_character_config/origin/000_mod_author_alchemy.ini" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional"/>
+                            </typeDescriptor>
+                        </plugin>
+
                         <plugin name="Guard of Whiterun">
                             <description>Start with equipment from the city armory, 250 septims, 5 torches, a hunting bow, steel arrows, potions, and a snack.</description>
                             <files>
